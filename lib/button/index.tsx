@@ -1,9 +1,11 @@
 import type { ReactNode } from "react";
 
-interface ButtonProps {
+type ButtonProps = {
   children: ReactNode;
-}
-
-export const Button = ({ children }: ButtonProps): ReactNode => {
-  return <button className="bg-red-700 bordrer">{children}</button>;
 };
+
+const Button = ({ children }: ButtonProps): JSX.Element => {
+  return <button className="bg-red-700 border">{children}</button>;
+};
+
+export { type ButtonProps, Button };
